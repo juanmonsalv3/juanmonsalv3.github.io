@@ -1,4 +1,5 @@
 {
+  "title": "Juan Monsalve's Resume",
   "react_dev": "React Frontend Developer",
   "frontend_dev": "Frontend Developer",
   "senior_front": "Senior Frontend Developer",
@@ -29,5 +30,6 @@
   "sprout_desc_2": "Development and maintenance of new features for company's main application.",
   "zeus_desc_1": "Full-stack developer working in .NET(C#), JavaScript, CSS, SQLServer, among others.",
   "zeus_desc_2": "Creation and maintenance of SQL databases for different specialized systems in specific business sectors",
-  "zeus_desc_3": "Development and design of desktop/web applications."
+  "zeus_desc_3": "Development and design of desktop/web applications.",
+  "education": "Education"
 }

@@ -1,6 +1,13 @@
-const Section = ({ children, header }) => {
+import classnames from 'tailwindcss-classnames';
+
+const Section = ({ header, className, children }) => {
   return (
-    <section className='w-full relative p-10 border-b border-gray-400'>
+    <section
+      className={classnames(
+        'w-full relative p-10 border-b border-gray-400',
+        className
+      )}
+    >
       <h2 className='uppercase italic text-3xl font-bold mb-8'>{header}</h2>
       {children}
     </section>
