@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Javascript",
+    "level": 5
+  },
+  {
+    "name": "Reactjs",
+    "level": 4
+  },
+  {
+    "name": "CSS",
+    "level": 4
+  },
+  {
+    "name": "SASS",
+    "level": 4
+  },
+  {
+    "name": "Nodejs",
+    "level": 3
+  },
+  {
+    "name": "Git",
+    "level": 3
+  },
+  {
+    "name": "WebGL",
+    "level": 3
+  },
+  {
+    "name": "Threejs",
+    "level": 3
+  },
+  {
+    "name": "GraphQL",
+    "level": 3
+  },
+  {
+    "name": "SQL",
+    "level": 3
+  },
+  {
+    "name": "MongoDB",
+    "level": 3
+  }
+]

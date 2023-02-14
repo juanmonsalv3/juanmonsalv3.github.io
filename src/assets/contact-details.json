@@ -1,0 +1,24 @@
+{
+  "location": {
+    "labelKey": "location",
+    "value": "Medellin, Colombia"
+  },
+  "phone": {
+    "labelKey": "phone",
+    "value": "(+57) 318 377 6216"
+  },
+  "email": {
+    "labelKey": "email",
+    "value": "juanchomonsalve92@gmail.com"
+  },
+  "linkedin": {
+    "labelKey": "linkedin",
+    "value": "https://www.linkedin.com/in/monsalvejuan/",
+    "label": "monsalvejuan/"
+  },
+  "github": {
+    "labelKey": "github",
+    "value": "https://www.github.com/juanmonsalv3/",
+    "label": "juanmonsalv3/"
+  }
+}
