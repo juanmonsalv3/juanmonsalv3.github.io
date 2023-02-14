@@ -15,7 +15,7 @@ const ExperienceItem = ({
   const { t } = useTranslation();
 
   return (
-    <article className='experience-item relative basis-6/12 shrink-0 pr-20'>
+    <article className='experience-item relative basis-6/12 shrink-0 pr-20 max-md:basis-full max-md:pr-0'>
       <h3 className='experience-role text-2xl font-bold text-slate-100 border-b-white border-b-2'>
         {t(role)}
       </h3>

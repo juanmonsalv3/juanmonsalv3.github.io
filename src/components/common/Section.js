@@ -4,7 +4,7 @@ const Section = ({ header, className, children }) => {
   return (
     <section
       className={classnames(
-        'w-full relative p-10 border-b border-gray-400',
+        'w-full relative p-10 border-b border-gray-400 max-md:p-6',
         className
       )}
     >

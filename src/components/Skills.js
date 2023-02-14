@@ -24,7 +24,7 @@ const SkillItem = memo(({ name, level, index }) => {
     `h-2 bg-blue-300 transition-all duration-[2000ms] ease-in-out origin-left`
   );
   return (
-    <li key='name' className='basis-3/13'>
+    <li key='name' className='basis-3/13 max-md:basis-full'>
       {name}
       <div className='bg-slate-500 mt-2'>
         <div
@@ -40,7 +40,7 @@ const SkillsList = () => {
   const { t } = useTranslation();
   return (
     <Section header={t('skills')}>
-      <ul className='flex flex-row flex-wrap gap-y-8 w-full justify-between '>
+      <ul className='flex flex-row flex-wrap w-full justify-between gap-y-8 max-md:gap-y-4'>
         {skills.map((s, i) => (
           <SkillItem {...s} index={i} key={i} />
         ))}

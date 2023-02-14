@@ -14,9 +14,9 @@ function App() {
         <Header />
         <SkillsList />
         <Experience />
-        <div className='flex'>
-          <Education className='grow-0 shrink-0 basis-1/2' />
-          <Interests className='grow-0 shrink-0 basis-1/2' />
+        <div className='flex flex-wrap'>
+          <Education className='grow-0 shrink-0 basis-1/2 max-md:basis-full' />
+          <Interests className='grow-0 shrink-0 basis-1/2 max-md:basis-full' />
         </div>
       </div>
     </div>

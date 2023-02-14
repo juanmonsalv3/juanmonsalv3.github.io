@@ -36,7 +36,7 @@ const ContactItem = memo(({ label, value, Icon, isEmail, isLink }) => {
   return (
     <li
       className={classNames(
-        'header__profile-detail m-4',
+        'header__profile-detail m-4 text-left max-md:m-2 max-md:ml-4',
         (isLink || isEmail)
       )}
       key={label}
@@ -51,7 +51,7 @@ const ProfileDetails = ({ className }) => {
     <ul
       className={classNames(
         className,
-        'profile-details bg-slate-800 flex justify-around text-right text-xs shrink-0 -mx-10 grow mt-4'
+        'profile-details bg-slate-800 flex justify-around text-right text-xs shrink-0 -mx-10 grow mt-4 max-md:flex-col max-md:mt-0'
       )}
     >
       <ContactItem {...contactDetails.location} Icon={IoLocation} />
