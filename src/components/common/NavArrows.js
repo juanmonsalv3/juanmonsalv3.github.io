@@ -2,7 +2,7 @@ import classNames from 'tailwindcss-classnames';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 
 const NavArrows = ({ onForwardClick, onBackClick }) => {
-  const arrowClasses = 'arrow flex inline-block cursor-pointer border p-3 rounded-full border-gray-400';
+  const arrowClasses = 'arrow flex inline-block cursor-pointer border p-3 rounded-full border-gray-400 hover:bg-gray-500 active:scale-110';
   const iconClasses = 'h-8 w-8';
   return (
     <div className='nav-arrows absolute flex top-8 right-0 items-center'>

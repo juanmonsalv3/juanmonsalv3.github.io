@@ -13,7 +13,7 @@ const Interests = ({className}) => {
       <article className='relative basis-6/12 shrink-0 pr-20'>
         <ul className='list-disc list-outside pl-4 mt-4 text-sm text-justify'>
           {list.map((l) => (
-            <Interest label={l} />
+            <Interest key={l} label={l} />
           ))}
         </ul>
       </article>

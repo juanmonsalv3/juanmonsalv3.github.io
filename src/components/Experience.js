@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import experiences from '../assets/experience.json';
 import Section from './common/Section';
+import NavArrows from './common/NavArrows';
+import { useCallback, useState } from 'react';
 
 const ExperienceItem = ({
   role,
@@ -15,7 +17,7 @@ const ExperienceItem = ({
   const { t } = useTranslation();
 
   return (
-    <article className='experience-item relative basis-6/12 shrink-0 pr-20 max-md:basis-full max-md:pr-0'>
+    <article className='experience-item relative basis-1/2 shrink-0 pr-20 max-md:basis-full max-md:pr-0'>
       <h3 className='experience-role text-2xl font-bold text-slate-100 border-b-white border-b-2'>
         {t(role)}
       </h3>
@@ -44,12 +46,31 @@ const ExperienceItem = ({
 
 const Experience = () => {
   const { t } = useTranslation();
+  const [offset, setOffset] = useState(0);
+
+  const onBackClick = useCallback(() => {
+    setOffset((value) => {
+      return value === 0
+        ? -100 * (Math.floor(experiences.length / 2) - 1)
+        : value + 100;
+    });
+  }, []);
+
+  const onForwardClick = useCallback(() => {
+    setOffset((value) => {
+      return -value / 100 === Math.floor(experiences.length / 2) - 1
+        ? 0
+        : value - 100;
+    });
+  }, []);
 
   return (
     <Section header={t('experience')}>
-      <div className='carousel-wrapper'>
+      <NavArrows onBackClick={onBackClick} onForwardClick={onForwardClick} />
+      <div className='carousel-wrapper overflow-hidden'>
         <div
-          className='flex flex-wrap gap-y-8'
+          className='flex gap-y-8 transition-all duration-1000 ease-in-out'
+          style={{ transform: `translateX(${offset}%)` }}
         >
           {experiences.map((exp, idx) => (
             <ExperienceItem key={idx} {...exp} />
