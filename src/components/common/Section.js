@@ -8,7 +8,7 @@ const Section = ({ header, className, children }) => {
         className
       )}
     >
-      <h2 className='uppercase italic text-3xl font-bold mb-8'>{header}</h2>
+      <h2 className='uppercase italic text-3xl max-md:text-xl font-bold mb-8'>{header}</h2>
       {children}
     </section>
   );

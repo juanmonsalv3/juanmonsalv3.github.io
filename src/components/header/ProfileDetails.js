@@ -54,8 +54,8 @@ const ProfileDetails = ({ className }) => {
         'profile-details bg-slate-800 flex justify-around text-right text-xs shrink-0 -mx-10 grow mt-4 max-md:flex-col max-md:mt-0'
       )}
     >
-      <ContactItem {...contactDetails.location} Icon={IoLocation} />
-      <ContactItem {...contactDetails.phone} Icon={IoPhonePortrait} />
+      {/* <ContactItem {...contactDetails.location} Icon={IoLocation} />
+      <ContactItem {...contactDetails.phone} Icon={IoPhonePortrait} /> */}
       <ContactItem {...contactDetails.email} isEmail Icon={IoMail} />
       <ContactItem {...contactDetails.linkedin} isLink Icon={IoLogoLinkedin} />
       <ContactItem {...contactDetails.github} isLink Icon={IoLogoGithub} />
