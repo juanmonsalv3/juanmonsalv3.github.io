@@ -13,18 +13,22 @@ const barWidths = {
   5: 'w-5/5',
 };
 
-
-const SkillItem = memo(({ name, level, index }) => {
+const SkillItem = memo(({ name, level, index, hide }) => {
   const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    setTimeout(() => setAnimated(true), (index + 1 )* 100);
+    setTimeout(() => setAnimated(true), (index + 1) * 100);
   }, [index]);
   const classes = classNames(
     barWidths[level.toString()],
     `h-2 bg-blue-300 transition-all duration-[2000ms] ease-in-out origin-left`
   );
   return (
-    <li key='name' className='basis-3/13 max-md:basis-full'>
+    <li
+      key='name'
+      className={classNames('basis-3/13 max-md:basis-full', {
+        'max-md:hidden': hide,
+      })}
+    >
       {name}
       <div className='bg-slate-500 mt-2'>
         <div

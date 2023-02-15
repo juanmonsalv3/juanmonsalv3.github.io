@@ -2,7 +2,9 @@ import { useTranslation } from 'react-i18next';
 import experiences from '../assets/experience.json';
 import Section from './common/Section';
 import NavArrows from './common/NavArrows';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+
+const mobileMQ = window.matchMedia('only screen and (max-width: 768px)');
 
 const ExperienceItem = ({
   role,
@@ -47,22 +49,31 @@ const ExperienceItem = ({
 const Experience = () => {
   const { t } = useTranslation();
   const [offset, setOffset] = useState(0);
+  const isMobile = mobileMQ.matches;
+  const maxSteps = isMobile
+    ? experiences.length - 1
+    : Math.floor(experiences.length / 2) - 1;
+
+  useEffect(() => {
+    const onresize = (evt) => {
+      setOffset(0);
+    };
+    mobileMQ.addEventListener('change', onresize);
+
+    return () => mobileMQ.removeEventListener('change', onresize);
+  }, []);
 
   const onBackClick = useCallback(() => {
     setOffset((value) => {
-      return value === 0
-        ? -100 * (Math.floor(experiences.length / 2) - 1)
-        : value + 100;
+      return value === 0 ? -100 * maxSteps : value + 100;
     });
-  }, []);
+  }, [maxSteps]);
 
   const onForwardClick = useCallback(() => {
     setOffset((value) => {
-      return -value / 100 === Math.floor(experiences.length / 2) - 1
-        ? 0
-        : value - 100;
+      return -value / 100 === maxSteps ? 0 : value - 100;
     });
-  }, []);
+  }, [maxSteps]);
 
   return (
     <Section header={t('experience')}>

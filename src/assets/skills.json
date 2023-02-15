@@ -13,23 +13,28 @@
   },
   {
     "name": "SASS",
-    "level": 4
+    "level": 4,
+    "hide": true
   },
   {
     "name": "Nodejs",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "Express",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "Git",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "WebGL",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "Threejs",
@@ -37,14 +42,17 @@
   },
   {
     "name": "GraphQL",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "SQL",
-    "level": 3
+    "level": 3,
+    "hide": true
   },
   {
     "name": "MongoDB",
-    "level": 3
+    "level": 3,
+    "hide": true
   }
 ]
