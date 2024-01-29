@@ -64,8 +64,10 @@
         >
           <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
           <h4 class="resume-item-details" itemprop="description">
-            {{ job.position }} &bull; {{ job.duration }}
+            <span>{{ job.position }}</span> &bull;
+            <span>{{ job.duration }}</span>
           </h4>
+
           <p class="resume-item-copy">{{ job.summary }}</p>
           {% if job.tools %}
           <p><b>Tools:</b> {{job.tools | join: ' · '}}</p>
@@ -147,7 +149,7 @@
         </header>
         <div class="skills-list skills-initial">
           {% for skill in site.data.skills %}
-          <div class="skill-item">
+          <div class="skill-item {% if skill.hidexs %}hidexs{% endif %}">
             <h4 class="resume-item-details">{{ skill.skill }}</h4>
             <div class="skill-bar">
               <div class="skill-level w-{{skill.level}}"></div>

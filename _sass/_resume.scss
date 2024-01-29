@@ -212,6 +212,9 @@
 
   .skill-item {
     flex: calc(25% - 15px) 0 0;
+    @include media_mobile {
+      flex: 100% 0 0;
+    }
 
     .skill-bar {
       width: 100%;
@@ -305,5 +308,11 @@
         font-size: 11px;
       }
     }
+  }
+}
+
+@include media_mobile {
+  .hidexs {
+    display: none !important;
   }
 }
