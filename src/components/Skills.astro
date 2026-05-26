@@ -1,0 +1,35 @@
+---
+import type { Resume, UiStrings } from '../types/resume';
+
+interface Props {
+  resume: Resume;
+  ui: UiStrings;
+}
+
+const { resume, ui } = Astro.props;
+---
+
+<section id="skills" class="mb-14 scroll-mt-24">
+  <h2 class="section-heading">{ui.navSkills}</h2>
+  <div class="grid gap-5 sm:grid-cols-2">
+    {
+      resume.skills.map((group) => (
+        <div class="card print-break-inside-avoid">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-semibold text-primary">{group.name}</h3>
+            {group.level && (
+              <span class="text-xs font-medium text-accent">{group.level}</span>
+            )}
+          </div>
+          {group.keywords && group.keywords.length > 0 && (
+            <ul class="mt-4 flex flex-wrap gap-2">
+              {group.keywords.map((keyword) => (
+                <li class="skill-tag">{keyword}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>

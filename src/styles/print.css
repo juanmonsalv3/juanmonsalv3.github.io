@@ -1,0 +1,48 @@
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  :root,
+  .dark {
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #111111;
+    --color-muted: #444444;
+    --color-accent: #0369a1;
+    --color-link: #0369a1;
+    --color-border: #dddddd;
+    --shadow-card: none;
+  }
+
+  body {
+    background: white !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border-color: #ddd !important;
+  }
+
+  .section-heading::after {
+    background-color: #0369a1 !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 9pt;
+    color: #555;
+  }
+
+  a[href^='mailto']::after,
+  a[href^='#']::after,
+  .no-print-link::after {
+    content: none !important;
+  }
+}

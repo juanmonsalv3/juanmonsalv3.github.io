@@ -1,0 +1,27 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+  title?: string;
+}
+
+const { class: className = '', size = 16, title } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class:list={['shrink-0', className]}
+  aria-hidden={title ? undefined : 'true'}
+  role={title ? 'img' : undefined}
+>
+  {title && <title>{title}</title>}
+  <slot />
+</svg>

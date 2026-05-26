@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteChrome from '../../components/SiteChrome.astro';
+import Header from '../../components/Header.astro';
+import Experience from '../../components/Experience.astro';
+import Skills from '../../components/Skills.astro';
+import Education from '../../components/Education.astro';
+import Interests from '../../components/Interests.astro';
+import { getUi } from '../../i18n';
+import { getResume } from '../../lib/resume';
+
+const locale = 'es';
+const resume = getResume(locale);
+const ui = getUi(locale);
+---
+
+<BaseLayout locale={locale}>
+  <SiteChrome locale={locale} ui={ui} />
+  <main class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+    <Header resume={resume} ui={ui} locale={locale} />
+    <Experience resume={resume} ui={ui} locale={locale} />
+    <Skills resume={resume} ui={ui} />
+    <Education resume={resume} ui={ui} locale={locale} />
+    <Interests resume={resume} ui={ui} />
+  </main>
+</BaseLayout>

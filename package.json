@@ -1,0 +1,25 @@
+{
+  "name": "juanmonsalv3.github.io",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/generate-pdf.mjs",
+    "preview": "astro preview",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.3.7",
+    "js-yaml": "^4.1.1",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "playwright": "^1.60.0"
+  }
+}

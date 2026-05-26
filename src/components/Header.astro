@@ -1,0 +1,109 @@
+---
+import type { Resume, UiStrings } from '../types/resume';
+import type { Locale } from '../types/resume';
+import { formatLocation } from '../lib/resume';
+import MapPin from './icons/MapPin.astro';
+import Mail from './icons/Mail.astro';
+import Phone from './icons/Phone.astro';
+import GitHubFilled from './icons/GitHubFilled.astro';
+import LinkedInFilled from './icons/LinkedInFilled.astro';
+import Globe from './icons/Globe.astro';
+
+interface Props {
+  resume: Resume;
+  ui: UiStrings;
+  locale: Locale;
+}
+
+const { resume, ui, locale } = Astro.props;
+const { basics } = resume;
+const location = formatLocation(resume, locale);
+const github = basics.profiles?.find((p) => p.network === 'GitHub');
+const linkedin = basics.profiles?.find((p) => p.network === 'LinkedIn');
+---
+
+<header class="mb-14 grid gap-8 sm:grid-cols-[8rem_1fr]">
+  <img
+    src="/images/avatar.jpg"
+    alt={basics.name}
+    width="128"
+    height="128"
+    class="h-32 w-32 shrink-0 rounded-2xl object-cover shadow-md ring-1 ring-black/5 dark:ring-white/10"
+    loading="eager"
+  />
+  <div class="min-w-0">
+    <h1 class="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+      {basics.name}
+    </h1>
+    <p class="mt-2 text-lg font-medium text-accent">{basics.label}</p>
+    <p class="mt-4 max-w-prose text-base leading-relaxed text-muted">
+      {basics.summary}
+    </p>
+  </div>
+  <div
+    class="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-muted pt-4 sm:col-span-2"
+  >
+    <dl class="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+      {location && (
+        <div class="contact-item">
+          <MapPin class="icon" size={16} />
+          <div>
+            <dt class="sr-only">{ui.locationLabel}</dt>
+            <dd class="text-muted">{location}</dd>
+          </div>
+        </div>
+      )}
+      {basics.phone && (
+        <div class="contact-item">
+          <Phone class="icon" size={16} />
+          <div>
+            <dt class="sr-only">{ui.phoneLabel}</dt>
+            <dd class="text-muted">{basics.phone}</dd>
+          </div>
+        </div>
+      )}
+    </dl>
+    <div class="ml-auto flex shrink-0 items-center gap-3">
+      <a
+        href={`mailto:${basics.email}`}
+        class="btn-icon-circle no-print"
+        aria-label={ui.emailAria}
+      >
+        <Mail size={18} />
+      </a>
+      {github && (
+        <a
+          href={github.url}
+          class="btn-icon-circle"
+          aria-label={`${ui.githubAria}${github.username ? ` (@${github.username})` : ''}`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <GitHubFilled size={18} />
+        </a>
+      )}
+      {linkedin && (
+        <a
+          href={linkedin.url}
+          class="btn-icon-circle"
+          aria-label={`${ui.linkedinAria}${linkedin.username ? ` (@${linkedin.username})` : ''}`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <LinkedInFilled size={18} />
+        </a>
+      )}
+      {basics.url && (
+        <a
+          href={basics.url}
+          class="btn-icon-circle"
+          aria-label={ui.websiteAria}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Globe size={18} />
+        </a>
+      )}
+    </div>
+  </div>
+</header>

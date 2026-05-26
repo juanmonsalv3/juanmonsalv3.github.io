@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Juan Monsalve",
+    "label": "Desarrollador Frontend",
+    "email": "juanmonsalve@outlook.com",
+    "phone": "+57 (318) 377-6216",
+    "url": "https://juanmonsalve.dev",
+    "summary": "Desarrollador de software altamente capacitado con más de 10 años de experiencia en desarrollo web. Dominio de HTML, CSS, JavaScript y React, con amplia experiencia en configuradores de productos 3D (WebGL, Three.js). Aprendizaje rápido, autogestión efectiva y trabajo en equipo, enfocado en soluciones innovadoras y de alta calidad.",
+    "location": {
+      "city": "Medellín",
+      "country": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "juanmonsalv3",
+        "url": "https://github.com/juanmonsalv3"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "monsalvejuan",
+        "url": "https://www.linkedin.com/in/monsalvejuan"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "YR",
+      "position": "Desarrollador Frontend Senior",
+      "startDate": "2022-01",
+      "summary": "Líder de equipo de 4 desarrolladores construyendo un configurador de productos 3D para una marca de alto perfil, permitiendo compras personalizadas. Desarrollo de soluciones web para tiendas físicas donde los clientes personalizan productos y los visualizan en 3D con JavaScript, React, WebGL y Three.js.",
+      "highlights": ["React.js", "Three.js", "Apollo GraphQL", "Cypress"]
+    },
+    {
+      "name": "EPAM Anywhere",
+      "position": "Desarrollador de Software Senior",
+      "startDate": "2021-09",
+      "endDate": "2022-01",
+      "summary": "Desarrollo front-end con JavaScript y CSS. Implementación de nuevas funcionalidades para aplicaciones internas de la empresa.",
+      "highlights": ["React.js", "Node.js", "Apollo GraphQL"]
+    },
+    {
+      "name": "Endava",
+      "position": "Desarrollador Web Senior",
+      "startDate": "2021-02",
+      "endDate": "2021-09",
+      "summary": "Desarrollo front-end con JavaScript y CSS. Desarrollo y mantenimiento de funcionalidades para aplicaciones internas de la empresa.",
+      "highlights": ["Vue.js", "Riot.js"]
+    },
+    {
+      "name": "ConfigureID (ahora YR)",
+      "position": "Ingeniero de Software",
+      "startDate": "2018-02",
+      "endDate": "2021-02",
+      "summary": "Desarrollo de componentes para personalización y visualización de productos (3D y 2D) en la web. Páginas de personalización para ecommerce con JavaScript/React. Mantenimiento de servicios backend con Node.js.",
+      "highlights": ["React.js", "Node.js", "Three.js"]
+    },
+    {
+      "name": "Sproutloud Media Networks",
+      "position": "Desarrollador Web",
+      "startDate": "2016-08",
+      "endDate": "2018-02",
+      "summary": "Desarrollo full-stack con PHP, JavaScript, CSS y PostgreSQL. Desarrollo y mantenimiento de funcionalidades para la aplicación principal de la empresa.",
+      "highlights": ["Ext.js", "PHP", "PostgreSQL"]
+    },
+    {
+      "name": "Zeus Tecnología (ahora Siesa)",
+      "position": "Desarrollador Web",
+      "startDate": "2014-02",
+      "endDate": "2016-08",
+      "summary": "Desarrollo full-stack con .NET (C#), JavaScript, CSS y SQL Server. Creación y mantenimiento de bases de datos SQL para sistemas especializados. Diseño de aplicaciones de escritorio y web.",
+      "highlights": ["JavaScript", "DotNetNuke (C#)", "Microsoft SQL Server"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Cartagena",
+      "area": "Ingeniería de Sistemas e Informática",
+      "studyType": "Ingeniero",
+      "startDate": "2009",
+      "endDate": "2016"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Experto",
+      "levelNumeric": 5,
+      "keywords": ["JavaScript", "React.js", "CSS", "GraphQL"]
+    },
+    {
+      "name": "3D y Gráficos",
+      "level": "Avanzado",
+      "levelNumeric": 3,
+      "keywords": ["Three.js", "WebGL"]
+    },
+    {
+      "name": "Backend y Datos",
+      "level": "Intermedio",
+      "levelNumeric": 3,
+      "keywords": ["Node.js", "Express", "SQL", "MongoDB"]
+    },
+    {
+      "name": "Herramientas",
+      "level": "Avanzado",
+      "levelNumeric": 4,
+      "keywords": ["Git", "Cypress"]
+    }
+  ],
+  "interests": [
+    { "name": "Programación" },
+    { "name": "Fútbol" },
+    { "name": "Literatura fantástica" },
+    { "name": "Videojuegos" }
+  ],
+  "meta": {
+    "theme": "default",
+    "lastUpdated": "2026-05-25"
+  }
+}

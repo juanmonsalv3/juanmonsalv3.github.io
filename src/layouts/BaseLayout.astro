@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import '../styles/print.css';
+import type { Locale } from '../types/resume';
+import { getUi } from '../i18n';
+import { getAlternateLocale, getCanonicalPath } from '../lib/resume';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+}
+
+const { locale, title, description } = Astro.props;
+const ui = getUi(locale);
+const siteTitle = title ?? ui.siteTitle;
+const siteDescription = description ?? ui.siteDescription;
+const canonicalURL = new URL(getCanonicalPath(locale), Astro.site);
+const alternateLocale = getAlternateLocale(locale);
+const alternateURL = new URL(getCanonicalPath(alternateLocale), Astro.site);
+const ogImage = new URL('/images/avatar.jpg', Astro.site);
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang={locale} href={canonicalURL} />
+    <link rel="alternate" hreflang={alternateLocale} href={alternateURL} />
+    <link rel="alternate" hreflang="x-default" href={new URL(getCanonicalPath('en'), Astro.site)} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={locale === 'es' ? 'es_CO' : 'en_US'} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={siteDescription} />
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark =
+          stored === 'dark' || (stored !== 'light' && (stored === 'system' || !stored) && prefersDark);
+        if (isDark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Juan Monsalve',
+        jobTitle: locale === 'es' ? 'Desarrollador Frontend' : 'Frontend Developer',
+        email: 'juanchomonsalve92@gmail.com',
+        telephone: '+57 3183776216',
+        url: 'https://juanmonsalve.dev',
+        sameAs: [
+          'https://github.com/juanmonsalv3',
+          'https://www.linkedin.com/in/monsalvejuan',
+        ],
+        image: ogImage.toString(),
+      })}
+    />
+  </head>
+  <body>
+    <slot />
+    <footer class="no-print border-t border-muted py-8 text-center text-sm text-muted">
+      <p>Juan Monsalve &bull; {year} &bull; {ui.footerRights}</p>
+    </footer>
+  </body>
+</html>

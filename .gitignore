@@ -1,15 +1,24 @@
-# project
-_site
-.sass-cache
-.vagrant
-_vendor
+# dependencies
+node_modules/
 
-# general
+# build
+dist/
+.astro/
+
+# env
+.env
+.env.*
+
+# OS
 .DS_Store
 Thumbs.db
-ehthumbs.db
 
+# legacy jekyll
+_site/
+.sass-cache/
+.vendor/
 Gemfile.lock
 
-beautiful-jekyll-theme-*.gem
-
+# playwright
+playwright-report/
+test-results/

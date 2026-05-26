@@ -1,0 +1,39 @@
+---
+import type { Locale } from '../types/resume';
+import { getUi } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUi(locale);
+---
+
+<nav
+  class="no-print flex items-center gap-0.5 rounded-lg border border-muted bg-surface p-0.5"
+  aria-label={ui.languageSwitcherAria}
+>
+  <a
+    href="/en/"
+    class:list={[
+      'rounded-md px-2.5 py-1 text-xs font-medium transition',
+      locale === 'en' ? 'bg-accent-soft text-accent' : 'text-muted hover:text-accent',
+    ]}
+    hreflang="en"
+    lang="en"
+  >
+    EN
+  </a>
+  <a
+    href="/es/"
+    class:list={[
+      'rounded-md px-2.5 py-1 text-xs font-medium transition',
+      locale === 'es' ? 'bg-accent-soft text-accent' : 'text-muted hover:text-accent',
+    ]}
+    hreflang="es"
+    lang="es"
+  >
+    ES
+  </a>
+</nav>

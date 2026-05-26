@@ -1,0 +1,36 @@
+---
+import type { Locale, Resume, UiStrings } from '../types/resume';
+import { formatDateRange } from '../lib/resume';
+
+interface Props {
+  resume: Resume;
+  ui: UiStrings;
+  locale: Locale;
+}
+
+const { resume, ui, locale } = Astro.props;
+---
+
+<section id="education" class="mb-14 scroll-mt-24">
+  <h2 class="section-heading">{ui.navEducation}</h2>
+  <ul class="space-y-8">
+    {
+      resume.education.map((edu) => (
+        <li class="print-break-inside-avoid border-l-2 border-muted pl-5">
+          <h3 class="text-lg font-semibold text-primary">{edu.institution}</h3>
+          <p class="mt-1 text-sm font-medium text-muted">
+            {[edu.studyType, edu.area].filter(Boolean).join(' · ')}
+            {edu.startDate && edu.endDate && (
+              <>
+                <span class="mx-2 opacity-40">·</span>
+                <time class="text-primary">
+                  {formatDateRange(edu.startDate, edu.endDate, ui.present, locale)}
+                </time>
+              </>
+            )}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</section>

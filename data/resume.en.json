@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Juan Monsalve",
+    "label": "Frontend Developer",
+    "email": "juanmonsalveg@outlook.com",
+    "phone": "+57 (318) 377-6216",
+    "url": "https://juanmonsalve.dev",
+    "summary": "Highly skilled and experienced Software Developer with 10+ years in web development. Proficient in HTML, CSS, JavaScript, and React, with deep experience in 3D product configurators (WebGL, Three.js). Fast learner, effective self-manager and team collaborator, focused on high-quality, innovative solutions.",
+    "location": {
+      "city": "Medellín",
+      "country": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "juanmonsalv3",
+        "url": "https://github.com/juanmonsalv3"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "monsalvejuan",
+        "url": "https://www.linkedin.com/in/monsalvejuan"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "YR",
+      "position": "Senior Frontend Developer",
+      "startDate": "2022-01",
+      "summary": "Team lead for 4 developers building a 3D product configurator for a high-profile brand, enabling personalized purchases. Developed in-store web solutions so customers can customize products and preview them in 3D using JavaScript, React, WebGL, and Three.js.",
+      "highlights": ["React.js", "Three.js", "Apollo GraphQL", "Cypress"]
+    },
+    {
+      "name": "EPAM Anywhere",
+      "position": "Senior Software Developer",
+      "startDate": "2021-09",
+      "endDate": "2022-01",
+      "summary": "Front-end development with JavaScript and CSS. Built new features for internal company applications.",
+      "highlights": ["React.js", "Node.js", "Apollo GraphQL"]
+    },
+    {
+      "name": "Endava",
+      "position": "Senior Web Developer",
+      "startDate": "2021-02",
+      "endDate": "2021-09",
+      "summary": "Front-end development with JavaScript and CSS. Developed and maintained features for internal company applications.",
+      "highlights": ["Vue.js", "Riot.js"]
+    },
+    {
+      "name": "ConfigureID (Now YR)",
+      "position": "Software Engineer",
+      "startDate": "2018-02",
+      "endDate": "2021-02",
+      "summary": "Built components for product customization and visualization (3D and 2D) on the web. Developed ecommerce customization pages with JavaScript/React. Maintained backend services with Node.js.",
+      "highlights": ["React.js", "Node.js", "Three.js"]
+    },
+    {
+      "name": "Sproutloud Media Networks",
+      "position": "Web Developer",
+      "startDate": "2016-08",
+      "endDate": "2018-02",
+      "summary": "Full-stack development with PHP, JavaScript, CSS, and PostgreSQL. Built and maintained features for the company's main application.",
+      "highlights": ["Ext.js", "PHP", "PostgreSQL"]
+    },
+    {
+      "name": "Zeus Tecnología (Now Siesa)",
+      "position": "Web Developer",
+      "startDate": "2014-02",
+      "endDate": "2016-08",
+      "summary": "Full-stack development with .NET (C#), JavaScript, CSS, and SQL Server. Created and maintained SQL databases for specialized business systems. Designed desktop and web applications.",
+      "highlights": ["JavaScript", "DotNetNuke (C#)", "Microsoft SQL Server"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad de Cartagena",
+      "area": "Systems and Informatics Engineering",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2009",
+      "endDate": "2016"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Master",
+      "levelNumeric": 5,
+      "keywords": ["JavaScript", "React.js", "CSS", "GraphQL"]
+    },
+    {
+      "name": "3D & Graphics",
+      "level": "Advanced",
+      "levelNumeric": 3,
+      "keywords": ["Three.js", "WebGL"]
+    },
+    {
+      "name": "Backend & Data",
+      "level": "Intermediate",
+      "levelNumeric": 3,
+      "keywords": ["Node.js", "Express", "SQL", "MongoDB"]
+    },
+    {
+      "name": "Tools",
+      "level": "Advanced",
+      "levelNumeric": 4,
+      "keywords": ["Git", "Cypress"]
+    }
+  ],
+  "interests": [
+    { "name": "Coding" },
+    { "name": "Football (soccer)" },
+    { "name": "Fantasy literature" },
+    { "name": "Video games" }
+  ],
+  "meta": {
+    "theme": "default",
+    "lastUpdated": "2026-05-25"
+  }
+}

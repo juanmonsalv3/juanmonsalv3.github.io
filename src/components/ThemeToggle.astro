@@ -1,0 +1,82 @@
+---
+import type { UiStrings } from '../types/resume';
+import Sun from './icons/Sun.astro';
+import Moon from './icons/Moon.astro';
+import Monitor from './icons/Monitor.astro';
+
+interface Props {
+  ui: UiStrings;
+}
+
+const { ui } = Astro.props;
+---
+
+<div class="no-print flex items-center gap-0.5 rounded-lg border border-muted bg-surface p-0.5">
+  <button
+    type="button"
+    data-theme="light"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    aria-label={`${ui.themeToggleAria}: ${ui.themeLight}`}
+  >
+    <Sun class="icon" size={14} />
+  </button>
+  <button
+    type="button"
+    data-theme="system"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    aria-label={`${ui.themeToggleAria}: ${ui.themeSystem}`}
+  >
+    <Monitor class="icon" size={14} />
+  </button>
+  <button
+    type="button"
+    data-theme="dark"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    aria-label={`${ui.themeToggleAria}: ${ui.themeDark}`}
+  >
+    <Moon class="icon" size={14} />
+  </button>
+</div>
+
+<script>
+  const storageKey = 'theme';
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.theme-btn');
+
+  function getStored(): string {
+    return localStorage.getItem(storageKey) ?? 'system';
+  }
+
+  function prefersDark(): boolean {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function applyTheme(mode: string) {
+    const isDark = mode === 'dark' || (mode === 'system' && prefersDark());
+    root.classList.toggle('dark', isDark);
+    buttons.forEach((btn) => {
+      const active = btn.dataset.theme === mode;
+      btn.classList.toggle('bg-accent-soft', active);
+      btn.classList.toggle('text-accent', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  function setTheme(mode: string) {
+    localStorage.setItem(storageKey, mode);
+    applyTheme(mode);
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const mode = btn.dataset.theme ?? 'system';
+      setTheme(mode);
+    });
+  });
+
+  applyTheme(getStored());
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (getStored() === 'system') applyTheme('system');
+  });
+</script>
