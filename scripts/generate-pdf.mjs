@@ -9,30 +9,38 @@ import { chromium } from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const distDir = path.join(root, 'dist');
+const astroBin = path.join(root, 'node_modules', 'astro', 'bin', 'astro.mjs');
 const port = 4321;
 const host = '127.0.0.1';
 const locales = ['en', 'es'];
 
 function startPreview() {
-  return new Promise((resolve, reject) => {
-    const proc = spawn(
-      'npx',
-      ['astro', 'preview', '--port', String(port), '--host', host],
-      { cwd: root, stdio: ['ignore', 'pipe', 'pipe'] },
-    );
+  return spawn(
+    process.execPath,
+    [astroBin, 'preview', '--port', String(port), '--host', host],
+    { cwd: root, detached: true, stdio: 'ignore' },
+  );
+}
 
-    const onData = (chunk) => {
-      const text = String(chunk);
-      if (text.includes(String(port)) || text.includes('previewing')) {
-        resolve(proc);
-      }
-    };
+async function stopPreview(proc) {
+  if (!proc?.pid) return;
 
-    proc.stdout?.on('data', onData);
-    proc.stderr?.on('data', onData);
-    proc.on('error', reject);
+  try {
+    process.kill(-proc.pid, 'SIGKILL');
+  } catch {
+    try {
+      proc.kill('SIGKILL');
+    } catch {
+      // already dead
+    }
+  }
 
-    delay(20000).then(() => resolve(proc));
+  await new Promise((resolve) => {
+    const timeout = setTimeout(resolve, 3000);
+    proc.on('exit', () => {
+      clearTimeout(timeout);
+      resolve();
+    });
   });
 }
 
@@ -50,10 +58,12 @@ async function waitForServer() {
 }
 
 async function main() {
-  const preview = await startPreview();
+  const preview = startPreview();
+  let browser;
+
   try {
     await waitForServer();
-    const browser = await chromium.launch();
+    browser = await chromium.launch();
     const page = await browser.newPage();
 
     for (const locale of locales) {
@@ -70,14 +80,15 @@ async function main() {
       });
       console.log(`Generated ${outFile}`);
     }
-
-    await browser.close();
   } finally {
-    preview.kill('SIGTERM');
+    if (browser) await browser.close().catch(() => {});
+    await stopPreview(preview);
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
