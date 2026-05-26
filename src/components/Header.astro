@@ -63,10 +63,10 @@ const linkedin = basics.profiles?.find((p) => p.network === 'LinkedIn');
         </div>
       )}
     </dl>
-    <div class="ml-auto flex shrink-0 items-center gap-3">
+    <div class="ml-auto flex shrink-0 items-center gap-3 no-print">
       <a
         href={`mailto:${basics.email}`}
-        class="btn-icon-circle no-print"
+        class="btn-icon-circle"
         aria-label={ui.emailAria}
       >
         <Mail size={18} />
@@ -105,5 +105,32 @@ const linkedin = basics.profiles?.find((p) => p.network === 'LinkedIn');
         </a>
       )}
     </div>
+    <p class="print-contact hidden w-full text-xs leading-snug text-muted sm:col-span-2">
+      <a href={`mailto:${basics.email}`} class="text-link">{basics.email}</a>
+      {github && (
+        <>
+          <span class="print-contact-sep"> · </span>
+          <a href={github.url} class="text-link">
+            {github.username ? `github.com/${github.username}` : github.url.replace(/^https?:\/\//, '')}
+          </a>
+        </>
+      )}
+      {linkedin && (
+        <>
+          <span class="print-contact-sep"> · </span>
+          <a href={linkedin.url} class="text-link">
+            {linkedin.username ? `linkedin.com/in/${linkedin.username}` : linkedin.url.replace(/^https?:\/\//, '')}
+          </a>
+        </>
+      )}
+      {basics.url && (
+        <>
+          <span class="print-contact-sep"> · </span>
+          <a href={basics.url} class="text-link">
+            {basics.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+          </a>
+        </>
+      )}
+    </p>
   </div>
 </header>

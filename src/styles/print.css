@@ -1,6 +1,22 @@
 @media print {
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
   .no-print {
     display: none !important;
+  }
+
+  .print-contact {
+    display: block !important;
+    margin-top: 0.15rem;
+    padding-top: 0;
+    border-top: none !important;
+  }
+
+  .print-contact a::after {
+    content: none !important;
   }
 
   :root,
@@ -15,34 +31,175 @@
     --shadow-card: none;
   }
 
+  html {
+    font-size: 9pt;
+  }
+
   body {
     background: white !important;
     color: #111 !important;
-    font-size: 11pt;
+    font-size: 9pt;
+    line-height: 1.3;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  header {
+    margin-bottom: 0.45rem !important;
+    gap: 0.35rem !important;
+    grid-template-columns: 3.25rem 1fr !important;
+  }
+
+  header img {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+    border-radius: 0.35rem !important;
+    box-shadow: none !important;
+  }
+
+  header h1 {
+    font-size: 14pt !important;
+    line-height: 1.15 !important;
+  }
+
+  header > div:nth-child(2) > p:first-of-type {
+    margin-top: 0.1rem !important;
+    font-size: 10pt !important;
+  }
+
+  header > div:nth-child(2) > p:last-of-type {
+    margin-top: 0.2rem !important;
+    font-size: 8.5pt !important;
+    line-height: 1.25 !important;
+  }
+
+  header > div:nth-child(3) {
+    padding-top: 0.15rem !important;
+    margin-top: 0 !important;
+    gap: 0.35rem 0.75rem !important;
+    grid-column: 1 / -1;
+    border-top: none !important;
+  }
+
+  header .contact-item .icon {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  header .contact-item {
+    font-size: 8pt !important;
+  }
+
+  section {
+    margin-bottom: 0.45rem !important;
+    scroll-margin-top: 0 !important;
+  }
+
+  .section-heading {
+    margin-bottom: 0.25rem !important;
+    font-size: 10pt !important;
+  }
+
+  .section-heading::after {
+    display: none !important;
+  }
+
+  #experience ol {
+    gap: 0.3rem !important;
+  }
+
+  #experience li {
+    padding-left: 0.45rem !important;
+    border-left-width: 1px !important;
+  }
+
+  #experience h3 {
+    font-size: 9.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  #experience article > p:first-of-type {
+    margin-top: 0 !important;
+    font-size: 8pt !important;
+  }
+
+  #experience article > p:nth-of-type(2) {
+    margin-top: 0.1rem !important;
+    font-size: 8pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #experience ul {
+    margin-top: 0.1rem !important;
+    gap: 0.15rem !important;
+  }
+
+  .tool-tag {
+    padding: 0 0.2rem !important;
+    font-size: 7pt !important;
+    border-radius: 0.15rem !important;
+    background: transparent !important;
+    color: var(--color-muted) !important;
+    border: 1px solid var(--color-border);
+  }
+
+  #skills .grid {
+    gap: 0.25rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .card {
     box-shadow: none !important;
     border-color: #ddd !important;
+    padding: 0.25rem 0.35rem !important;
+    border-radius: 0.2rem !important;
   }
 
-  .section-heading::after {
-    background-color: #0369a1 !important;
+  #skills h3 {
+    font-size: 8.5pt !important;
+  }
+
+  #skills .text-xs {
+    display: none !important;
+  }
+
+  #skills ul {
+    margin-top: 0.15rem !important;
+    gap: 0.15rem !important;
+  }
+
+  .skill-tag {
+    padding: 0 0.25rem !important;
+    font-size: 7pt !important;
+    line-height: 1.35 !important;
+    background: transparent !important;
+    border: 1px solid var(--color-border);
+    border-radius: 0.15rem !important;
+  }
+
+  #education ul {
+    gap: 0.25rem !important;
+  }
+
+  #education h3 {
+    font-size: 9pt !important;
+  }
+
+  #education p {
+    margin-top: 0 !important;
+    font-size: 8pt !important;
   }
 
   .print-break-inside-avoid {
     break-inside: avoid;
   }
 
-  a[href^='http']::after {
-    content: ' (' attr(href) ')';
-    font-size: 9pt;
-    color: #555;
-  }
-
-  a[href^='mailto']::after,
-  a[href^='#']::after,
-  .no-print-link::after {
-    content: none !important;
+  #experience li,
+  #skills .card,
+  #education li {
+    break-inside: avoid;
   }
 }
