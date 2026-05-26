@@ -13,12 +13,6 @@ dist/
 .DS_Store
 Thumbs.db
 
-# legacy jekyll
-_site/
-.sass-cache/
-.vendor/
-Gemfile.lock
-
 # playwright
 playwright-report/
 test-results/

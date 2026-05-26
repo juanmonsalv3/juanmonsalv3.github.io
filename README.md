@@ -39,14 +39,6 @@ UI labels (section titles, buttons) live in:
 - `src/i18n/ui.en.json`
 - `src/i18n/ui.es.json`
 
-## Legacy migration
-
-If you still have Jekyll `_data/*.yml` files:
-
-```bash
-node scripts/migrate-yaml-to-resume.mjs
-```
-
 ## Deploy
 
 Pushes to `main` trigger GitHub Actions (`.github/workflows/deploy.yml`) to build and publish to GitHub Pages. Custom domain is configured via `public/CNAME`.
