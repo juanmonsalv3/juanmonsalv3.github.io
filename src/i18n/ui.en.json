@@ -20,5 +20,7 @@
   "phoneLabel": "Phone",
   "githubAria": "GitHub profile",
   "linkedinAria": "LinkedIn profile",
-  "websiteAria": "Personal website"
+  "websiteAria": "Personal website",
+  "noticeBanner": "Not looking for job offers — this page is only to keep my résumé up to date and easy to share.",
+  "noticeBannerAria": "Availability notice"
 }

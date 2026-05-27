@@ -80,4 +80,6 @@ export interface UiStrings {
   githubAria: string;
   linkedinAria: string;
   websiteAria: string;
+  noticeBanner: string;
+  noticeBannerAria: string;
 }

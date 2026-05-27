@@ -20,5 +20,7 @@
   "phoneLabel": "Teléfono",
   "githubAria": "Perfil de GitHub",
   "linkedinAria": "Perfil de LinkedIn",
-  "websiteAria": "Sitio web personal"
+  "websiteAria": "Sitio web personal",
+  "noticeBanner": "No busco ofertas de empleo — esta página solo sirve para mantener mi currículum actualizado y fácil de compartir.",
+  "noticeBannerAria": "Aviso de disponibilidad laboral"
 }

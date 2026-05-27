@@ -2,6 +2,7 @@
 import type { Locale, UiStrings } from '../types/resume';
 import { getPdfPath } from '../lib/resume';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import NoticeBanner from './NoticeBanner.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import Download from './icons/Download.astro';
 
@@ -52,3 +53,4 @@ const navItems = [
     </div>
   </div>
 </div>
+<NoticeBanner ui={ui} />
