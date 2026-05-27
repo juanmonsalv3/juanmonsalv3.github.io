@@ -163,14 +163,8 @@
   }
 
   .contact-item .icon {
-    color: var(--color-muted);
-    transition: color 0.15s ease;
-  }
-
-  .contact-item:hover .icon,
-  .contact-item a:hover ~ .icon,
-  .contact-item:has(a:hover) .icon {
     color: var(--color-accent);
+    transition: color 0.15s ease;
   }
 
   .btn-with-icon {
@@ -182,8 +176,14 @@
   }
 
   .btn-icon-circle {
-    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white transition;
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition;
     background-color: var(--color-accent);
+    /* Light accent: white icon. Dark theme accent is bright cyan — use page bg tone for contrast. */
+    color: #fff;
+  }
+
+  .dark .btn-icon-circle {
+    color: var(--color-bg);
   }
 
   .btn-icon-circle:hover,
