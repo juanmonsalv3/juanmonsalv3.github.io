@@ -15,7 +15,7 @@ const { ui } = Astro.props;
   <button
     type="button"
     data-theme="light"
-    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent cursor-pointer"
     aria-label={`${ui.themeToggleAria}: ${ui.themeLight}`}
   >
     <Sun class="icon" size={14} />
@@ -23,7 +23,7 @@ const { ui } = Astro.props;
   <button
     type="button"
     data-theme="system"
-    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent cursor-pointer"
     aria-label={`${ui.themeToggleAria}: ${ui.themeSystem}`}
   >
     <Monitor class="icon" size={14} />
@@ -31,7 +31,7 @@ const { ui } = Astro.props;
   <button
     type="button"
     data-theme="dark"
-    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent"
+    class="theme-btn flex items-center justify-center rounded-md p-1.5 text-muted transition hover:text-accent cursor-pointer"
     aria-label={`${ui.themeToggleAria}: ${ui.themeDark}`}
   >
     <Moon class="icon" size={14} />

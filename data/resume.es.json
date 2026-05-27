@@ -2,11 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Juan Monsalve",
-    "label": "Desarrollador Frontend",
+    "label": "Desarrollador Frontend Senior",
     "email": "juanmonsalve@outlook.com",
-    "phone": "+57 (318) 377-6216",
     "url": "https://juanmonsalve.dev",
-    "summary": "Desarrollador de software altamente capacitado con más de 10 años de experiencia en desarrollo web. Dominio de HTML, CSS, JavaScript y React, con amplia experiencia en configuradores de productos 3D (WebGL, Three.js). Aprendizaje rápido, autogestión efectiva y trabajo en equipo, enfocado en soluciones innovadoras y de alta calidad.",
+    "summary": "Desarrollador Frontend Senior con más de 10 años de experiencia construyendo aplicaciones web modernas con JavaScript, React y equipos de producto en la nube. Sólida experiencia en arquitectura frontend, modernización de aplicaciones, manejo de estado, automatización E2E y visualización de productos con WebGL/Three.js. Experiencia colaborando de forma remota con equipos frontend y backend distribuidos para entregar experiencias de usuario mantenibles y de alta calidad.",
     "location": {
       "city": "Medellín",
       "country": "Colombia"
@@ -26,18 +25,26 @@
   },
   "work": [
     {
+      "name": "Milestone Systems / Arcules",
+      "position": "Frontend Software Engineer",
+      "startDate": "2023-12",
+      "summary": "Ingeniero frontend en una plataforma cloud de Video Software as a Service (VSaaS) para gestión de cámaras de video y workflows relacionados. Desarrollo y mantenimiento de funcionalidades para gestión de casos, configuración de cámaras y páginas de estado de dispositivos, además de contribuir a la automatización de pruebas E2E, modernización del proyecto y mantenibilidad frontend a largo plazo. Colaboración remota con un equipo frontend de 6 personas y múltiples equipos backend distribuidos en distintas regiones.",
+      "highlights": ["JavaScript", "React.js", "Redux", "Material UI", "React Query", "Node.js", "Pruebas E2E"]
+    },
+    {
       "name": "YR",
       "position": "Desarrollador Frontend Senior",
       "startDate": "2022-01",
-      "summary": "Líder de equipo de 4 desarrolladores construyendo un configurador de productos 3D para una marca de alto perfil, permitiendo compras personalizadas. Desarrollo de soluciones web para tiendas físicas donde los clientes personalizan productos y los visualizan en 3D con JavaScript, React, WebGL y Three.js.",
-      "highlights": ["React.js", "Three.js", "Apollo GraphQL", "Cypress"]
+      "endDate": "2023-12",
+      "summary": "Lideré un equipo de 4 desarrolladores frontend en la construcción de experiencias de configuración de productos 3D para una marca de alto perfil. Entregué flujos de personalización para ecommerce y tiendas físicas que permitían a los clientes personalizar productos y previsualizarlos en 3D, combinando React, WebGL, Three.js, integración con GraphQL y prácticas de pruebas automatizadas.",
+      "highlights": ["React.js", "Three.js", "WebGL", "Apollo GraphQL", "Cypress"]
     },
     {
       "name": "EPAM Anywhere",
       "position": "Desarrollador de Software Senior",
       "startDate": "2021-09",
       "endDate": "2022-01",
-      "summary": "Desarrollo front-end con JavaScript y CSS. Implementación de nuevas funcionalidades para aplicaciones internas de la empresa.",
+      "summary": "Desarrollo y mantenimiento de funcionalidades frontend para aplicaciones internas de negocio usando React, JavaScript y GraphQL. Trabajo en equipos de ingeniería distribuidos para mejorar la funcionalidad de aplicaciones y la entrega de interfaces mantenibles.",
       "highlights": ["React.js", "Node.js", "Apollo GraphQL"]
     },
     {
@@ -45,7 +52,7 @@
       "position": "Desarrollador Web Senior",
       "startDate": "2021-02",
       "endDate": "2021-09",
-      "summary": "Desarrollo front-end con JavaScript y CSS. Desarrollo y mantenimiento de funcionalidades para aplicaciones internas de la empresa.",
+      "summary": "Desarrollo y mantenimiento de funcionalidades frontend para aplicaciones internas empresariales, trabajando con frameworks JavaScript y patrones de interfaz basados en componentes.",
       "highlights": ["Vue.js", "Riot.js"]
     },
     {
@@ -53,7 +60,7 @@
       "position": "Ingeniero de Software",
       "startDate": "2018-02",
       "endDate": "2021-02",
-      "summary": "Desarrollo de componentes para personalización y visualización de productos (3D y 2D) en la web. Páginas de personalización para ecommerce con JavaScript/React. Mantenimiento de servicios backend con Node.js.",
+      "summary": "Construcción de componentes web y páginas de ecommerce para personalización y visualización de productos en 2D/3D. Desarrollo de experiencias de usuario con React y soporte de servicios backend con Node.js para flujos de personalización.",
       "highlights": ["React.js", "Node.js", "Three.js"]
     },
     {
@@ -61,7 +68,7 @@
       "position": "Desarrollador Web",
       "startDate": "2016-08",
       "endDate": "2018-02",
-      "summary": "Desarrollo full-stack con PHP, JavaScript, CSS y PostgreSQL. Desarrollo y mantenimiento de funcionalidades para la aplicación principal de la empresa.",
+      "summary": "Desarrollo y mantenimiento de funcionalidades full-stack para la aplicación principal de la empresa usando PHP, JavaScript, CSS y PostgreSQL.",
       "highlights": ["Ext.js", "PHP", "PostgreSQL"]
     },
     {
@@ -69,7 +76,7 @@
       "position": "Desarrollador Web",
       "startDate": "2014-02",
       "endDate": "2016-08",
-      "summary": "Desarrollo full-stack con .NET (C#), JavaScript, CSS y SQL Server. Creación y mantenimiento de bases de datos SQL para sistemas especializados. Diseño de aplicaciones de escritorio y web.",
+      "summary": "Construcción de aplicaciones web y de escritorio para sistemas empresariales especializados usando .NET, C#, JavaScript, CSS y SQL Server. Creación y mantenimiento de bases de datos SQL para soportar flujos de negocio.",
       "highlights": ["JavaScript", "DotNetNuke (C#)", "Microsoft SQL Server"]
     }
   ],
@@ -87,7 +94,13 @@
       "name": "Frontend",
       "level": "Experto",
       "levelNumeric": 5,
-      "keywords": ["JavaScript", "React.js", "CSS", "GraphQL"]
+      "keywords": ["JavaScript", "React.js", "Redux", "React Query", "Material UI", "CSS", "GraphQL"]
+    },
+    {
+      "name": "Arquitectura y Calidad",
+      "level": "Avanzado",
+      "levelNumeric": 4,
+      "keywords": ["Arquitectura Frontend", "Modernización de Aplicaciones", "Pruebas E2E", "Cypress", "Mantenibilidad"]
     },
     {
       "name": "3D y Gráficos",
@@ -96,16 +109,16 @@
       "keywords": ["Three.js", "WebGL"]
     },
     {
-      "name": "Backend y Datos",
+      "name": "Backend y APIs",
       "level": "Intermedio",
       "levelNumeric": 3,
-      "keywords": ["Node.js", "Express", "SQL", "MongoDB"]
+      "keywords": ["Node.js", "APIs REST", "GraphQL", "SQL", "MongoDB"]
     },
     {
       "name": "Herramientas",
       "level": "Avanzado",
       "levelNumeric": 4,
-      "keywords": ["Git", "Cypress"]
+      "keywords": ["Git", "Colaboración Remota", "Colaboración Interdisciplinaria"]
     }
   ],
   "interests": [
@@ -116,6 +129,6 @@
   ],
   "meta": {
     "theme": "default",
-    "lastUpdated": "2026-05-25"
+    "lastUpdated": "2026-05-26"
   }
 }
