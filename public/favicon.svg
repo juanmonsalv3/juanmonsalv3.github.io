@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Code">
-  <rect width="32" height="32" rx="7" fill="#0369a1" class="bg" />
+  <rect width="32" height="32" rx="7" fill="#e07b2e" class="bg" />
   <path
     d="M11.5 10 7 16l4.5 6"
     stroke="#f8fafc"
@@ -25,8 +25,8 @@
   />
   <style>
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #0c4a6e; }
-      .mark { stroke: #e0f2fe; }
+      .bg { fill: #f4a04a; }
+      .mark { stroke: #1a120c; }
     }
   </style>
 </svg>

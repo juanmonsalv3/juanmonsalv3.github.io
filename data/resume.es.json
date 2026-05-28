@@ -2,10 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Juan Monsalve",
-    "label": "Desarrollador Frontend Senior",
+    "label": "Ingeniero Frontend Senior",
     "email": "juanmonsalveg@outlook.com",
     "url": "https://juanmonsalve.dev",
-    "summary": "Desarrollador Frontend Senior con más de 10 años de experiencia construyendo aplicaciones web modernas con JavaScript, React y equipos de producto en la nube. Sólida experiencia en arquitectura frontend, modernización de aplicaciones, manejo de estado, automatización E2E y visualización de productos con WebGL/Three.js. Experiencia colaborando de forma remota con equipos frontend y backend distribuidos para entregar experiencias de usuario mantenibles y de alta calidad.",
+    "summary": "Ingeniero Frontend Senior con más de 10 años entregando productos React para SaaS en la nube y ecommerce. Actualmente desarrollo funcionalidades en una plataforma VSaaS multi-región, impulsando modernización frontend y calidad E2E. Anteriormente lideré un equipo de 4 en configuradores 3D para una marca global. Sólido en arquitectura, manejo de estado y colaboración asíncrona con equipos frontend y backend distribuidos.",
+    "keyHighlights": [
+      "Más de 10 años entregando aplicaciones React en producción para SaaS en la nube y ecommerce",
+      "Lideré un equipo frontend de 4 personas en configuradores 3D para una marca deportiva global",
+      "Ingeniería en plataforma VSaaS con modernización, automatización E2E y entrega multi-región"
+    ],
     "location": {
       "city": "Medellín",
       "country": "Colombia"
@@ -28,56 +33,95 @@
       "name": "Milestone Systems / Arcules",
       "position": "Frontend Software Engineer",
       "startDate": "2023-12",
-      "summary": "Ingeniero frontend en una plataforma cloud de Video Software as a Service (VSaaS) para gestión de cámaras de video y workflows relacionados. Desarrollo y mantenimiento de funcionalidades para gestión de casos, configuración de cámaras y páginas de estado de dispositivos, además de contribuir a la automatización de pruebas E2E, modernización del proyecto y mantenibilidad frontend a largo plazo. Colaboración remota con un equipo frontend de 6 personas y múltiples equipos backend distribuidos en distintas regiones.",
-      "highlights": ["JavaScript", "React.js", "Redux", "Material UI", "React Query", "Node.js", "Pruebas E2E"]
+      "summary": "Plataforma cloud de Video Software as a Service (VSaaS) para gestión de cámaras de video y flujos operativos.",
+      "highlights": [
+        "Entregué módulos orientados al cliente para gestión de casos, configuración de cámaras y estado de dispositivos en un producto VSaaS multi-región",
+        "Contribuí a iniciativas de modernización frontend para mejorar la mantenibilidad y la velocidad de desarrollo",
+        "Amplié la cobertura E2E con Playwright en flujos críticos, integrada en CI para reducir regresiones antes del release",
+        "Colaboré con un equipo frontend de 6 personas y equipos backend distribuidos en varias regiones"
+      ],
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Redux",
+        "TanStack Query",
+        "Material UI",
+        "Node.js",
+        "Playwright"
+      ]
     },
     {
       "name": "YR",
       "position": "Desarrollador Frontend Senior",
       "startDate": "2022-01",
       "endDate": "2023-12",
-      "summary": "Lideré un equipo de 4 desarrolladores frontend en la construcción de experiencias de configuración de productos 3D para una marca de alto perfil. Entregué flujos de personalización para ecommerce y tiendas físicas que permitían a los clientes personalizar productos y previsualizarlos en 3D, combinando React, WebGL, Three.js, integración con GraphQL y prácticas de pruebas automatizadas.",
-      "highlights": ["React.js", "Three.js", "WebGL", "Apollo GraphQL", "Cypress"]
+      "summary": "Personalización de productos 3D para una marca deportiva global — experiencias en tienda y ecommerce.",
+      "highlights": [
+        "Lideré un equipo de 4 desarrolladores frontend en configuradores 3D con previsualización en tiempo real",
+        "Entregué flujos de personalización en tienda y ecommerce para que clientes customizaran productos en 3D",
+        "Integré APIs GraphQL y pruebas E2E con Playwright en rutas de personalización de alto tráfico",
+        "Mentoricé al equipo en rendimiento WebGL, arquitectura de componentes y pruebas automatizadas"
+      ],
+      "technologies": ["TypeScript", "React", "Three.js", "WebGL", "Apollo GraphQL", "Playwright"]
     },
     {
       "name": "EPAM Anywhere",
       "position": "Desarrollador de Software Senior",
       "startDate": "2021-09",
       "endDate": "2022-01",
-      "summary": "Desarrollo y mantenimiento de funcionalidades frontend para aplicaciones internas de negocio usando React, JavaScript y GraphQL. Trabajo en equipos de ingeniería distribuidos para mejorar la funcionalidad de aplicaciones y la entrega de interfaces mantenibles.",
-      "highlights": ["React.js", "Node.js", "Apollo GraphQL"]
+      "summary": "Contrato corto entregando funcionalidades React para aplicaciones empresariales internas.",
+      "highlights": [
+        "Entregué funcionalidades React para aplicaciones de negocio internas usadas por equipos operativos distribuidos",
+        "Integré GraphQL con Apollo Client para consultas predecibles y estado de UI mantenible"
+      ],
+      "technologies": ["React", "JavaScript", "Node.js", "Apollo GraphQL"]
     },
     {
       "name": "Endava",
       "position": "Desarrollador Web Senior",
       "startDate": "2021-02",
       "endDate": "2021-09",
-      "summary": "Desarrollo y mantenimiento de funcionalidades frontend para aplicaciones internas empresariales, trabajando con frameworks JavaScript y patrones de interfaz basados en componentes.",
-      "highlights": ["Vue.js", "Riot.js"]
+      "summary": "Aplicaciones internas empresariales para un cliente de consultoría tecnológica global.",
+      "highlights": [
+        "Desarrollé funcionalidades en Vue.js para herramientas internas con patrones de UI basados en componentes",
+        "Entregué interfaces mantenibles dentro de un equipo de ingeniería distribuido"
+      ],
+      "technologies": ["Vue.js", "JavaScript", "Riot.js"]
     },
     {
       "name": "ConfigureID (ahora YR)",
       "position": "Ingeniero de Software",
       "startDate": "2018-02",
       "endDate": "2021-02",
-      "summary": "Construcción de componentes web y páginas de ecommerce para personalización y visualización de productos en 2D/3D. Desarrollo de experiencias de usuario con React y soporte de servicios backend con Node.js para flujos de personalización.",
-      "highlights": ["React.js", "Node.js", "Three.js"]
+      "summary": "Personalización de productos en ecommerce y visualización 2D/3D — antecedente del rol en YR.",
+      "highlights": [
+        "Desarrollé experiencias ecommerce en React para personalización y visualización de productos en 2D/3D",
+        "Soporté servicios Node.js para flujos de personalización y pedidos"
+      ],
+      "technologies": ["React", "Node.js", "Three.js", "JavaScript"]
     },
     {
       "name": "Sproutloud Media Networks",
       "position": "Desarrollador Web",
       "startDate": "2016-08",
       "endDate": "2018-02",
-      "summary": "Desarrollo y mantenimiento de funcionalidades full-stack para la aplicación principal de la empresa usando PHP, JavaScript, CSS y PostgreSQL.",
-      "highlights": ["Ext.js", "PHP", "PostgreSQL"]
+      "summary": "Desarrollo full-stack en la aplicación principal del negocio.",
+      "highlights": [
+        "Entregué funcionalidades full-stack en la plataforma principal con PHP, JavaScript, CSS y PostgreSQL"
+      ],
+      "technologies": ["Ext.js", "PHP", "PostgreSQL", "JavaScript"]
     },
     {
       "name": "Zeus Tecnología (ahora Siesa)",
       "position": "Desarrollador Web",
       "startDate": "2014-02",
       "endDate": "2016-08",
-      "summary": "Construcción de aplicaciones web y de escritorio para sistemas empresariales especializados usando .NET, C#, JavaScript, CSS y SQL Server. Creación y mantenimiento de bases de datos SQL para soportar flujos de negocio.",
-      "highlights": ["JavaScript", "DotNetNuke (C#)", "Microsoft SQL Server"]
+      "summary": "Sistemas de negocio especializados para clientes empresariales.",
+      "highlights": [
+        "Construí aplicaciones web y de escritorio para sistemas tipo ERP con .NET y SQL Server"
+      ],
+      "technologies": ["JavaScript", "C#", "DotNetNuke", "Microsoft SQL Server"]
     }
   ],
   "education": [
@@ -91,44 +135,91 @@
   ],
   "skills": [
     {
-      "name": "Frontend",
-      "level": "Experto",
-      "levelNumeric": 5,
-      "keywords": ["JavaScript", "React.js", "Redux", "React Query", "Material UI", "CSS", "GraphQL"]
+      "name": "Frontend (ecosistema React)",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Astro",
+        "React Router",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Styled Components",
+        "Sass",
+        "Vite",
+        "Webpack",
+        "MUI"
+      ]
     },
     {
-      "name": "Arquitectura y Calidad",
-      "level": "Avanzado",
-      "levelNumeric": 4,
-      "keywords": ["Arquitectura Frontend", "Modernización de Aplicaciones", "Pruebas E2E", "Cypress", "Mantenibilidad"]
+      "name": "Estado, Datos y APIs",
+      "keywords": [
+        "Redux",
+        "Redux Toolkit",
+        "Zustand",
+        "TanStack Query",
+        "GraphQL",
+        "APIs REST",
+        "OpenAPI/Swagger",
+        "Passport.js",
+        "OAuth 2.0 / OIDC",
+        "JWT",
+        "SQL",
+        "Zod",
+        "Yup"
+      ]
     },
     {
-      "name": "3D y Gráficos",
-      "level": "Avanzado",
-      "levelNumeric": 3,
-      "keywords": ["Three.js", "WebGL"]
+      "name": "Calidad y Pruebas",
+      "keywords": [
+        "Playwright",
+        "Cypress",
+        "Jest",
+        "Vitest",
+        "React Testing Library",
+        "ESLint",
+        "Prettier"
+      ]
     },
     {
-      "name": "Backend y APIs",
-      "level": "Intermedio",
-      "levelNumeric": 3,
-      "keywords": ["Node.js", "APIs REST", "GraphQL", "SQL", "MongoDB"]
+      "name": "Rendimiento, Accesibilidad e i18n",
+      "keywords": [
+        "Optimización de Rendimiento",
+        "Rendimiento Web",
+        "Análisis de Bundle",
+        "Core Web Vitals",
+        "Accesibilidad (WCAG/ARIA)",
+        "axe",
+        "Internacionalización (i18n)"
+      ]
     },
     {
-      "name": "Herramientas",
-      "level": "Avanzado",
-      "levelNumeric": 4,
-      "keywords": ["Git", "Colaboración Remota", "Colaboración Interdisciplinaria"]
+      "name": "Entrega y Observabilidad",
+      "keywords": [
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI",
+        "Docker",
+        "Feature Flags",
+        "Sentry",
+        "Git"
+      ]
     }
   ],
-  "interests": [
-    { "name": "Programación" },
-    { "name": "Fútbol" },
-    { "name": "Literatura fantástica" },
-    { "name": "Videojuegos" }
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Dominio profesional"
+    }
   ],
   "meta": {
     "theme": "default",
-    "lastUpdated": "2026-05-26"
+    "lastUpdated": "2026-05-27"
   }
 }

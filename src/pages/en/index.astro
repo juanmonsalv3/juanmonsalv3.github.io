@@ -4,8 +4,8 @@ import SiteChrome from '../../components/SiteChrome.astro';
 import Header from '../../components/Header.astro';
 import Experience from '../../components/Experience.astro';
 import Skills from '../../components/Skills.astro';
+import Languages from '../../components/Languages.astro';
 import Education from '../../components/Education.astro';
-import Interests from '../../components/Interests.astro';
 import { getUi } from '../../i18n';
 import { getResume } from '../../lib/resume';
 
@@ -20,7 +20,7 @@ const ui = getUi(locale);
     <Header resume={resume} ui={ui} locale={locale} />
     <Experience resume={resume} ui={ui} locale={locale} />
     <Skills resume={resume} ui={ui} />
+    <Languages resume={resume} ui={ui} />
     <Education resume={resume} ui={ui} locale={locale} />
-    <Interests resume={resume} ui={ui} />
   </main>
 </BaseLayout>

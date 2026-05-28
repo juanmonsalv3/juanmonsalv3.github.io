@@ -23,11 +23,11 @@
   .dark {
     --color-bg: #ffffff;
     --color-surface: #ffffff;
-    --color-text: #111111;
-    --color-muted: #444444;
-    --color-accent: #0369a1;
-    --color-link: #0369a1;
-    --color-border: #dddddd;
+    --color-text: #2c1810;
+    --color-muted: #6b4e3a;
+    --color-accent: #b85a18;
+    --color-link: #b85a18;
+    --color-border: #e8dcc8;
     --shadow-card: none;
   }
 
@@ -37,7 +37,7 @@
 
   body {
     background: white !important;
-    color: #111 !important;
+    color: #2c1810 !important;
     font-size: 9pt;
     line-height: 1.3;
   }
@@ -74,6 +74,18 @@
     margin-top: 0.2rem !important;
     font-size: 8.5pt !important;
     line-height: 1.25 !important;
+  }
+
+  header .achievement-list,
+  header > div:nth-child(2) > ul {
+    margin-top: 0.15rem !important;
+    font-size: 8pt !important;
+    line-height: 1.25 !important;
+    gap: 0.05rem !important;
+  }
+
+  header > div:nth-child(2) > ul li {
+    margin-bottom: 0.05rem !important;
   }
 
   header > div:nth-child(3) {
@@ -121,18 +133,24 @@
     line-height: 1.2 !important;
   }
 
-  #experience article > p:first-of-type {
-    margin-top: 0 !important;
-    font-size: 8pt !important;
-  }
-
-  #experience article > p:nth-of-type(2) {
+  #experience article > p {
     margin-top: 0.1rem !important;
     font-size: 8pt !important;
     line-height: 1.25 !important;
   }
 
-  #experience ul {
+  #experience .achievement-list {
+    margin-top: 0.1rem !important;
+    font-size: 7.5pt !important;
+    line-height: 1.2 !important;
+    gap: 0.05rem !important;
+  }
+
+  #experience .achievement-list li {
+    margin-bottom: 0.05rem !important;
+  }
+
+  #experience article > ul:not(.achievement-list) {
     margin-top: 0.1rem !important;
     gap: 0.15rem !important;
   }
@@ -162,10 +180,6 @@
     font-size: 8.5pt !important;
   }
 
-  #skills .text-xs {
-    display: none !important;
-  }
-
   #skills ul {
     margin-top: 0.15rem !important;
     gap: 0.15rem !important;
@@ -193,13 +207,23 @@
     font-size: 8pt !important;
   }
 
+  #languages ul {
+    gap: 0.1rem !important;
+  }
+
+  #languages li {
+    font-size: 8pt !important;
+    line-height: 1.25 !important;
+  }
+
   .print-break-inside-avoid {
     break-inside: avoid;
   }
 
   #experience li,
   #skills .card,
-  #education li {
+  #education li,
+  #languages li {
     break-inside: avoid;
   }
 }

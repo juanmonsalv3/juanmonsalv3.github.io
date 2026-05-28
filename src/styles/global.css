@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-text: #18181b;
-  --color-muted: #52525b;
-  --color-accent: #0369a1;
-  --color-accent-hover: #0284c7;
-  --color-link: #0369a1;
-  --color-border: #e4e4e7;
-  --color-selection-bg: #e0f2fe;
-  --color-selection-text: #0c4a6e;
-  --color-accent-soft: #f0f9ff;
-  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --color-bg: #fdf6ed;
+  --color-surface: #fff9f2;
+  --color-text: #2c1810;
+  --color-muted: #6b4e3a;
+  --color-accent: #e07b2e;
+  --color-accent-hover: #b85a18;
+  --color-link: #e07b2e;
+  --color-border: #f0e0cc;
+  --color-selection-bg: #f4b84a;
+  --color-selection-text: #2c1810;
+  --color-accent-soft: #fbf0e0;
+  --shadow-card: 0 1px 3px 0 rgb(44 24 16 / 0.08), 0 1px 2px -1px rgb(44 24 16 / 0.06);
 }
 
 .dark {
-  --color-bg: #09090b;
-  --color-surface: #18181b;
-  --color-text: #fafafa;
-  --color-muted: #a1a1aa;
-  --color-accent: #38bdf8;
-  --color-accent-hover: #7dd3fc;
-  --color-link: #38bdf8;
-  --color-border: #27272a;
-  --color-selection-bg: #0c4a6e;
-  --color-selection-text: #e0f2fe;
-  --color-accent-soft: #0c4a6e33;
-  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --color-bg: #1a120c;
+  --color-surface: #2c1810;
+  --color-text: #f5e6d3;
+  --color-muted: #a8927a;
+  --color-accent: #f4a04a;
+  --color-accent-hover: #f4b84a;
+  --color-link: #f4a04a;
+  --color-border: #3d2817;
+  --color-selection-bg: #4a3220;
+  --color-selection-text: #f5e6d3;
+  --color-accent-soft: #3a2a1a;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.35);
 }
 
 @theme {
@@ -178,7 +178,7 @@
   .btn-icon-circle {
     @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition;
     background-color: var(--color-accent);
-    /* Light accent: white icon. Dark theme accent is bright cyan — use page bg tone for contrast. */
+    /* Light: white icon on orange. Dark: cream page bg on golden accent. */
     color: #fff;
   }
 

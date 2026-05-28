@@ -39,6 +39,16 @@ const linkedin = basics.profiles?.find((p) => p.network === 'LinkedIn');
     <p class="mt-4 max-w-prose text-base leading-relaxed text-muted">
       {basics.summary}
     </p>
+    {basics.keyHighlights && basics.keyHighlights.length > 0 && (
+      <ul
+        class="achievement-list mt-4 max-w-prose list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-primary"
+        aria-label={ui.keyHighlightsAria}
+      >
+        {basics.keyHighlights.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    )}
   </div>
   <div
     class="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-muted pt-4 sm:col-span-2"

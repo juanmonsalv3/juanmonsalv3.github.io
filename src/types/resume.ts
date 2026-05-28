@@ -13,6 +13,7 @@ export interface ResumeBasics {
   phone?: string;
   url?: string;
   summary: string;
+  keyHighlights?: string[];
   location?: {
     city?: string;
     country?: string;
@@ -25,8 +26,14 @@ export interface ResumeWork {
   position: string;
   startDate: string;
   endDate?: string;
-  summary: string;
+  summary?: string;
   highlights?: string[];
+  technologies?: string[];
+}
+
+export interface ResumeLanguage {
+  language: string;
+  fluency: string;
 }
 
 export interface ResumeEducation {
@@ -39,13 +46,7 @@ export interface ResumeEducation {
 
 export interface ResumeSkill {
   name: string;
-  level?: string;
-  levelNumeric?: number;
   keywords?: string[];
-}
-
-export interface ResumeInterest {
-  name: string;
 }
 
 export interface Resume {
@@ -53,7 +54,7 @@ export interface Resume {
   work: ResumeWork[];
   education: ResumeEducation[];
   skills: ResumeSkill[];
-  interests: ResumeInterest[];
+  languages: ResumeLanguage[];
   meta?: Record<string, string>;
 }
 
@@ -63,7 +64,9 @@ export interface UiStrings {
   navExperience: string;
   navSkills: string;
   navEducation: string;
-  navInterests: string;
+  navLanguages: string;
+  technologies: string;
+  keyHighlightsAria: string;
   downloadPdf: string;
   downloadPdfAria: string;
   emailAria: string;

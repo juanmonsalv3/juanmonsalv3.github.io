@@ -15,12 +15,7 @@ const { resume, ui } = Astro.props;
     {
       resume.skills.map((group) => (
         <div class="card print-break-inside-avoid">
-          <div class="flex items-baseline justify-between gap-2">
-            <h3 class="font-semibold text-primary">{group.name}</h3>
-            {group.level && (
-              <span class="text-xs font-medium text-accent">{group.level}</span>
-            )}
-          </div>
+          <h3 class="font-semibold text-primary">{group.name}</h3>
           {group.keywords && group.keywords.length > 0 && (
             <ul class="mt-4 flex flex-wrap gap-2">
               {group.keywords.map((keyword) => (
