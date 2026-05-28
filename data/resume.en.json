@@ -35,20 +35,26 @@
       "startDate": "2023-12",
       "summary": "Cloud Video Software as a Service (VSaaS) platform for managing video cameras and operational workflows.",
       "highlights": [
-        "Shipped customer-facing modules for case management, camera settings, and device status across a multi-region VSaaS product",
-        "Contributed to frontend modernization initiatives to improve long-term maintainability and developer velocity",
-        "Extended Playwright E2E coverage for critical workflows, integrated with CI to reduce regression risk before release",
-        "Collaborated with a 6-person frontend team and distributed backend teams across multiple regions"
+        "Built and shipped customer-facing modules including cases & evidence management, camera settings, and maps-based workflows for a multi-region VSaaS platform",
+        "Drove modernization efforts across the SPA (React + Vite), including package upgrades, E2E test modernization, and unit-test adoption (Vitest/Jest)",
+        "Improved observability by instrumenting frontend error reporting and workflow tracing in Sentry to shorten time-to-diagnosis",
+        "Partnered with a central frontend team supporting 5 backend teams, aligning UI contracts, i18n, and delivery across parallel streams"
       ],
       "technologies": [
         "TypeScript",
         "JavaScript",
         "React",
-        "Redux",
-        "TanStack Query",
+        "Vite",
         "Material UI",
+        "TanStack Query",
+        "Redux",
+        "Zustand",
+        "react-intl",
+        "Sentry",
         "Node.js",
-        "Playwright"
+        "Playwright",
+        "Vitest",
+        "Jest"
       ]
     },
     {
@@ -58,10 +64,11 @@
       "endDate": "2023-12",
       "summary": "3D product customization for a global athletic brand — in-store and ecommerce experiences.",
       "highlights": [
-        "Led a team of 4 frontend developers building 3D product configurators with real-time preview",
-        "Delivered in-store and ecommerce personalization flows used by customers to customize products in 3D",
-        "Integrated GraphQL APIs and Playwright E2E tests for high-traffic customization paths",
-        "Mentored developers on WebGL performance, component architecture, and automated testing practices"
+        "Led a team of 4 frontend engineers delivering multiple 3D product configurators with real-time rendering for in-store and ecommerce use cases",
+        "Led the modernization of the visualization stack from 2D to 3D using WebGL and Three.js, enabling richer real-time previews",
+        "Owned client-facing discovery, technical alignment, and delivery planning to execute against stakeholder timelines",
+        "Built robust data flows by integrating GraphQL APIs and adding Playwright E2E coverage for high-traffic customization journeys",
+        "Mentored engineers on WebGL/Three.js performance, component architecture, and testing strategy"
       ],
       "technologies": ["TypeScript", "React", "Three.js", "WebGL", "Apollo GraphQL", "Playwright"]
     },
@@ -75,7 +82,7 @@
         "Shipped React UI features for internal business applications used by distributed operations teams",
         "Integrated GraphQL with Apollo Client for predictable data fetching and maintainable UI state"
       ],
-      "technologies": ["React", "JavaScript", "Node.js", "Apollo GraphQL"]
+      "technologies": ["React", "JavaScript", "Node.js"]
     },
     {
       "name": "Endava",
@@ -91,37 +98,45 @@
     },
     {
       "name": "ConfigureID (now YR)",
-      "position": "Software Engineer",
+      "position": "Frontend Engineer",
       "startDate": "2018-02",
       "endDate": "2021-02",
-      "summary": "Ecommerce product customization and 2D/3D visualization — precursor to the YR role.",
+      "summary": "Ecommerce product customization and personalization embedded in brand sites (2D/3D configurators).",
       "highlights": [
-        "Developed React ecommerce experiences for 2D/3D product customization and visualization",
-        "Supported Node.js services powering customization and order workflows"
+        "Built multiple product configurators from scratch and maintained a portfolio of long-lived experiences across brands including Ray-Ban, Oakley, Louis Vuitton, Ralph Lauren, Moncler, Adidas, Fender, Puma, and more",
+        "Promoted from mid-level to senior; led delivery for two client projects, owning technical direction, estimation, and cross-team execution",
+        "Led the modernization of the visualization stack from 2D to 3D using WebGL and Three.js across key configurator experiences",
+        "Added Playwright/Cypress-style E2E coverage (where applicable) to protect key purchase and customization flows and reduce regressions",
+        "Supported Node.js backend services and implemented analytics instrumentation (Google Analytics) to improve funnel visibility"
       ],
-      "technologies": ["React", "Node.js", "Three.js", "JavaScript"]
+      "technologies": ["JavaScript", "React", "Three.js", "WebGL", "CSS", "Sass", "PostCSS", "Node.js", "Playwright", "Google Analytics"]
     },
     {
       "name": "Sproutloud Media Networks",
       "position": "Web Developer",
       "startDate": "2016-08",
       "endDate": "2018-02",
-      "summary": "Full-stack development on the company's core business application.",
+      "summary": "Marketing funds and campaign management platform for brands and partner networks.",
       "highlights": [
-        "Delivered full-stack features on the primary platform using PHP, JavaScript, CSS, and PostgreSQL"
+        "Delivered full-stack features for managing marketing funds, approvals, and campaign workflows in a large legacy web application",
+        "Built and maintained PHP/Laravel services alongside an ExtJS frontend, focusing on reliability and maintainable UI patterns",
+        "Partnered with product and QA to ship iterative improvements in an Agile environment"
       ],
-      "technologies": ["Ext.js", "PHP", "PostgreSQL", "JavaScript"]
+      "technologies": ["PHP", "Laravel", "Ext.js", "JavaScript", "CSS", "PostgreSQL"]
     },
     {
       "name": "Zeus Tecnología (now Siesa)",
       "position": "Web Developer",
       "startDate": "2014-02",
       "endDate": "2016-08",
-      "summary": "Specialized business systems for enterprise clients.",
+      "summary": "Enterprise software suite for restaurants, hotels, VIP clubs, accounting, and other business areas.",
       "highlights": [
-        "Built web and desktop applications for ERP-style business systems using .NET and SQL Server"
+        "Progressed from intern to mid-level engineer over 2 years, delivering features across multiple business domains",
+        "Built a restaurant table-reservation product across desktop and web using C# and ASP.NET",
+        "Implemented hotel-occupancy forecasting using statistical regression models to support planning and operations",
+        "Contributed to modernizing a restaurant POS suite from desktop to web using ASP.NET, DotNetNuke, JavaScript, and CSS"
       ],
-      "technologies": ["JavaScript", "C#", "DotNetNuke", "Microsoft SQL Server"]
+      "technologies": ["C#", "ASP.NET", "DotNetNuke", "JavaScript", "CSS", "Microsoft SQL Server"]
     }
   ],
   "education": [

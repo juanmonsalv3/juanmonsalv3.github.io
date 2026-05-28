@@ -35,20 +35,26 @@
       "startDate": "2023-12",
       "summary": "Plataforma cloud de Video Software as a Service (VSaaS) para gestión de cámaras de video y flujos operativos.",
       "highlights": [
-        "Entregué módulos orientados al cliente para gestión de casos, configuración de cámaras y estado de dispositivos en un producto VSaaS multi-región",
-        "Contribuí a iniciativas de modernización frontend para mejorar la mantenibilidad y la velocidad de desarrollo",
-        "Amplié la cobertura E2E con Playwright en flujos críticos, integrada en CI para reducir regresiones antes del release",
-        "Colaboré con un equipo frontend de 6 personas y equipos backend distribuidos en varias regiones"
+        "Desarrollé y entregué módulos orientados al cliente (gestión de casos y evidencias, configuración de cámaras y flujos basados en mapas) para una plataforma VSaaS multi-región",
+        "Impulsé iniciativas de modernización en la SPA (React + Vite), incluyendo upgrades de paquetes, modernización de E2E y adopción de pruebas unitarias (Vitest/Jest)",
+        "Mejoré la observabilidad instrumentando Sentry para errores y trazabilidad de flujos, reduciendo el tiempo de diagnóstico",
+        "Colaboré con un equipo frontend central que apoya a 5 equipos backend, alineando contratos de UI, i18n y entrega en paralelo"
       ],
       "technologies": [
         "TypeScript",
         "JavaScript",
         "React",
-        "Redux",
-        "TanStack Query",
+        "Vite",
         "Material UI",
+        "TanStack Query",
+        "Redux",
+        "Zustand",
+        "react-intl",
+        "Sentry",
         "Node.js",
-        "Playwright"
+        "Playwright",
+        "Vitest",
+        "Jest"
       ]
     },
     {
@@ -58,12 +64,13 @@
       "endDate": "2023-12",
       "summary": "Personalización de productos 3D para una marca deportiva global — experiencias en tienda y ecommerce.",
       "highlights": [
-        "Lideré un equipo de 4 desarrolladores frontend en configuradores 3D con previsualización en tiempo real",
-        "Entregué flujos de personalización en tienda y ecommerce para que clientes customizaran productos en 3D",
-        "Integré APIs GraphQL y pruebas E2E con Playwright en rutas de personalización de alto tráfico",
-        "Mentoricé al equipo en rendimiento WebGL, arquitectura de componentes y pruebas automatizadas"
+        "Lideré un equipo de 4 ingenieros frontend entregando múltiples configuradores 3D con renderizado en tiempo real para casos de uso en tienda y ecommerce",
+        "Lideré la modernización del stack de visualización de 2D a 3D usando WebGL y Three.js, habilitando previsualizaciones en tiempo real más ricas",
+        "Me encargué del discovery con el cliente, alineación técnica y planificación de entrega para cumplir cronogramas de stakeholders",
+        "Construí flujos de datos robustos integrando APIs GraphQL y agregando cobertura E2E con Playwright en journeys de personalización de alto tráfico",
+        "Mentoricé al equipo en rendimiento WebGL/Three.js, arquitectura de componentes y estrategia de pruebas"
       ],
-      "technologies": ["TypeScript", "React", "Three.js", "WebGL", "Apollo GraphQL", "Playwright"]
+      "technologies": ["TypeScript", "React", "Three.js", "WebGL", "Playwright"]
     },
     {
       "name": "EPAM Anywhere",
@@ -75,7 +82,7 @@
         "Entregué funcionalidades React para aplicaciones de negocio internas usadas por equipos operativos distribuidos",
         "Integré GraphQL con Apollo Client para consultas predecibles y estado de UI mantenible"
       ],
-      "technologies": ["React", "JavaScript", "Node.js", "Apollo GraphQL"]
+      "technologies": ["React", "JavaScript", "Node.js"]
     },
     {
       "name": "Endava",
@@ -91,37 +98,45 @@
     },
     {
       "name": "ConfigureID (ahora YR)",
-      "position": "Ingeniero de Software",
+      "position": "Ingeniero Frontend",
       "startDate": "2018-02",
       "endDate": "2021-02",
-      "summary": "Personalización de productos en ecommerce y visualización 2D/3D — antecedente del rol en YR.",
+      "summary": "Personalización y customización de productos embebida en sitios ecommerce (configuradores 2D/3D).",
       "highlights": [
-        "Desarrollé experiencias ecommerce en React para personalización y visualización de productos en 2D/3D",
-        "Soporté servicios Node.js para flujos de personalización y pedidos"
+        "Construí múltiples configuradores desde cero y di mantenimiento a un portafolio de experiencias de larga vida para marcas como Ray-Ban, Oakley, Louis Vuitton, Ralph Lauren, Moncler, Adidas, Fender, Puma y más",
+        "Ascendí de nivel mid a senior; lideré la entrega de dos proyectos para clientes, definiendo dirección técnica, estimaciones y ejecución cross-team",
+        "Lideré la modernización del stack de visualización de 2D a 3D usando WebGL y Three.js en experiencias clave de configuración",
+        "Agregué cobertura E2E (Playwright/Cypress cuando aplicaba) para proteger flujos críticos de compra y personalización y reducir regresiones",
+        "Soporté servicios backend en Node.js e instrumenté analítica (Google Analytics) para mejorar visibilidad del funnel"
       ],
-      "technologies": ["React", "Node.js", "Three.js", "JavaScript"]
+      "technologies": ["JavaScript", "React", "Three.js", "WebGL", "CSS", "Sass", "PostCSS", "Node.js", "Playwright", "Google Analytics"]
     },
     {
       "name": "Sproutloud Media Networks",
       "position": "Desarrollador Web",
       "startDate": "2016-08",
       "endDate": "2018-02",
-      "summary": "Desarrollo full-stack en la aplicación principal del negocio.",
+      "summary": "Plataforma para gestionar fondos de marketing y campañas para marcas y redes de partners.",
       "highlights": [
-        "Entregué funcionalidades full-stack en la plataforma principal con PHP, JavaScript, CSS y PostgreSQL"
+        "Entregué funcionalidades full-stack para gestionar fondos de marketing, aprobaciones y flujos de campañas en una aplicación web legacy",
+        "Construí y mantuve servicios en PHP/Laravel junto con un frontend en ExtJS, priorizando confiabilidad y patrones de UI mantenibles",
+        "Colaboré con producto y QA para entregar mejoras iterativas bajo un enfoque Agile"
       ],
-      "technologies": ["Ext.js", "PHP", "PostgreSQL", "JavaScript"]
+      "technologies": ["PHP", "Laravel", "Ext.js", "JavaScript", "CSS", "PostgreSQL"]
     },
     {
       "name": "Zeus Tecnología (ahora Siesa)",
       "position": "Desarrollador Web",
       "startDate": "2014-02",
       "endDate": "2016-08",
-      "summary": "Sistemas de negocio especializados para clientes empresariales.",
+      "summary": "Suite de software empresarial para restaurantes, hoteles, clubes VIP, contabilidad y otras áreas.",
       "highlights": [
-        "Construí aplicaciones web y de escritorio para sistemas tipo ERP con .NET y SQL Server"
+        "Evolucioné de practicante a ingeniero mid en 2 años, entregando funcionalidades en múltiples dominios de negocio",
+        "Desarrollé un producto de reservas de mesas para restaurantes en desktop y web usando C# y ASP.NET",
+        "Implementé predicción de ocupación hotelera con modelos de regresión estadística para apoyar planeación y operación",
+        "Contribuí a modernizar una suite de POS para restaurantes de desktop a web usando ASP.NET, DotNetNuke, JavaScript y CSS"
       ],
-      "technologies": ["JavaScript", "C#", "DotNetNuke", "Microsoft SQL Server"]
+      "technologies": ["C#", "ASP.NET", "DotNetNuke", "JavaScript", "CSS", "Microsoft SQL Server"]
     }
   ],
   "education": [
